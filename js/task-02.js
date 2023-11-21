@@ -14,4 +14,4 @@ const items = ingredients.map((el) => {
     li.classList.add('item');
     return li;
 });
-items.forEach((item) => ul.appendChild(item));
+ul.append(...items);

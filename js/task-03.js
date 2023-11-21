@@ -14,11 +14,13 @@ const images = [
 ];
 
 const ul = document.querySelector('.gallery');
-console.log(ul);
 
-images.forEach((elem) => {
-    ul.insertAdjacentHTML(
+const liArray = images.map((elem) => {
+    const li = document.createElement('li');
+    li.insertAdjacentHTML(
         'beforeend',
-        `<li><img src="${elem.url}" alt="${elem.alt}"></li>`
+        `<img src="${elem.url}" alt="${elem.alt}">`
     );
+    return li;
 });
+ul.append(...liArray);
