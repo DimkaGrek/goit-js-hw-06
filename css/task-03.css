@@ -1,0 +1,7 @@
+.gallery {
+    list-style: none;
+    display: flex;
+}
+img {
+    width: 90%;
+}
