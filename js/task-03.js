@@ -16,11 +16,6 @@ const images = [
 const ul = document.querySelector('.gallery');
 
 const liArray = images.map((elem) => {
-    const li = document.createElement('li');
-    li.insertAdjacentHTML(
-        'beforeend',
-        `<img src="${elem.url}" alt="${elem.alt}">`
-    );
-    return li;
+    return `<li><img src="${elem.url}" alt="${elem.alt}"></li>`;
 });
-ul.append(...liArray);
+ul.insertAdjacentHTML('beforeend', liArray.join('\n'));
